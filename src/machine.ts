@@ -1,16 +1,6 @@
 // Máquina XState — 100% funcional, zero I/O, zero classes
 import { assign, setup } from "xstate";
-
-export const BOT_IDS = {
-  TRI: "TRI",
-  QUAL: "QUAL",
-  REP: "REP",
-  AGD: "AGD",
-  ATD: "ATD",
-} as const;
-
-type BotId = (typeof BOT_IDS)[keyof typeof BOT_IDS];
-type PerfilTipo = "lead_novo" | "retorno" | "cliente";
+import type { BotId, PerfilTipo } from "./types.js";
 
 // Placeholder — a ser implementado na Fase 1
 export const conversationMachine = setup({

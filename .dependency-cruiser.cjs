@@ -1,5 +1,5 @@
 /** @type {import('dependency-cruiser').IConfiguration} */
-const SRC = "workers/chatflux-orchestrator/src";
+const SRC = "src";
 
 module.exports = {
   forbidden: [
@@ -30,7 +30,7 @@ module.exports = {
       to: { path: `${SRC}/orchestrator\\.ts$` },
     },
 
-    // ── machine.ts nao importa services/ (FSM e pura, sem I/O) ──
+    // ── machine.ts so importa types.ts (FSM e pura, sem I/O) ──
     {
       name: "machine-cannot-import-services",
       severity: "error",
